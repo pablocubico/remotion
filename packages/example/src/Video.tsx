@@ -290,6 +290,14 @@ export const Index: React.FC = () => {
 				fps={30}
 				durationInFrames={300}
 			/>
+			<Composition
+				id="tonejs"
+				lazyComponent={() => import('./ToneJS')}
+				width={1080}
+				height={1080}
+				fps={30}
+				durationInFrames={300}
+			/>
 			<Still id="Orb" component={OrbScene} width={2000} height={2000} />
 		</>
 	);

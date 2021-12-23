@@ -417,6 +417,7 @@ importers:
       remotion: 2.5.5
       styled-components: ^5.1.1
       svg-path-properties: ^1.0.4
+      tone: ^14.7.77
       ts-jest: ^27.0.5
       ts-node: ^9.1.1
       ts-unused-exports: ^7.0.1
@@ -447,6 +448,7 @@ importers:
       remotion: link:../core
       styled-components: 5.3.1_react-dom@17.0.2+react@17.0.2
       svg-path-properties: 1.0.11
+      tone: 14.7.77
       ts-node: 9.1.1_typescript@4.4.3
       ts-unused-exports: 7.0.3_typescript@4.4.3
       typescript: 4.4.3
@@ -3999,6 +4001,13 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.9
+
+  /@babel/runtime/7.16.5:
+    resolution: {integrity: sha512-TXWihFIS3Pyv5hzR7j6ihmeLkZfrXGxAr5UfSl8CHf+6q/wpiYDkUau0czckpYG8QmnCIuPpdLtuA9VmuGGyMA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.13.9
+    dev: false
 
   /@babel/template/7.15.4:
     resolution: {integrity: sha512-UgBAfEa1oGuYgDIPM2G+aHa4Nlo9Lh6mGD2bDBGMTbYnc38vulXPuC1MGjYILIEmlwl6Rd+BPR9ee3gm20CBtg==}
@@ -8059,6 +8068,14 @@ packages:
 
   /audiobuffer-to-wav/1.0.0:
     resolution: {integrity: sha1-1bQyJxRV5/7laxEc0PjWINf54QU=}
+    dev: false
+
+  /automation-events/4.0.11:
+    resolution: {integrity: sha512-wyolBiLuV7ZLvL9rRWGrd5tda3XjlRKfA2kb8iqqjE9Hq8muTEWfi9JIp3b+43o+u55CP+NyMDsSuX1+/78vfg==}
+    engines: {node: '>=12.20.1'}
+    dependencies:
+      '@babel/runtime': 7.16.5
+      tslib: 2.3.1
     dev: false
 
   /autoprefixer/10.3.7_postcss@8.3.9:
@@ -20352,6 +20369,14 @@ packages:
     resolution: {integrity: sha512-GrdeshiRmS1YLMYgzF16olf2jJ/IzxXY9lhKOskuVziubpTYcYqyOwYeJKzQkwy7uN0fYSsbsC4RQaXf9LCrYA==}
     dev: false
 
+  /standardized-audio-context/25.3.18:
+    resolution: {integrity: sha512-IakGd+iCm0cXltxWWDHLpMJ/72DmYllWO5DUgNu/NIm2tsNyFe7LFseBjbXwLYM+zWZ/Fe0a2dEWY911auNcOg==}
+    dependencies:
+      '@babel/runtime': 7.16.5
+      automation-events: 4.0.11
+      tslib: 2.3.1
+    dev: false
+
   /state-toggle/1.0.3:
     resolution: {integrity: sha512-d/5Z4/2iiCnHw6Xzghyhb+GcmF89bxwgXG60wjIiZaxnymbyOmI8Hk4VqHXiVVp6u2ysaskFfXg3ekCj4WNftQ==}
     dev: false
@@ -21090,6 +21115,13 @@ packages:
     engines: {node: '>=0.6'}
     dev: false
 
+  /tone/14.7.77:
+    resolution: {integrity: sha512-tCfK73IkLHyzoKUvGq47gyDyxiKLFvKiVCOobynGgBB9Dl0NkxTM2p+eRJXyCYrjJwy9Y0XCMqD3uOYsYt2Fdg==}
+    dependencies:
+      standardized-audio-context: 25.3.18
+      tslib: 2.3.1
+    dev: false
+
   /totalist/1.1.0:
     resolution: {integrity: sha512-gduQwd1rOdDMGxFG1gEvhV88Oirdo2p+KjoYFU7k2g+i7n6AFFbDQ5kMPUsW0pNbfQsB/cwXvT1i4Bue0s9g5g==}
     engines: {node: '>=6'}
@@ -21250,7 +21282,7 @@ packages:
       '@types/jest': 27.0.2
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
-      jest: 27.2.4
+      jest: 27.2.4_ts-node@9.1.1
       jest-util: 27.2.4
       json5: 2.2.0
       lodash: 4.17.21
